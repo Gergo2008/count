@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylee.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <button id="minus" onclick="change(this)">-</button>
+            <div id="szamlalo">0</div>
+            <button id="plus" onclick="change(this)">+</button>
+            <button onclick="inicializalas()">inicializalas</button>
+        </div>
+    </div>
+    <script>
+        const szamlaloDiv = document.getElementById("szamlalo")
+        let szamlalo = 0
+        const btnMinus = document.getElementById("minus")
+        const btnPlus = document.getElementById("plus")
+        
+
+        function change(domObj){
+            console.log(domObj.textContent);
+            const operator = domObj.textContent
+
+            if(operator == "+") szamlalo++
+            else szamlalo--
+
+            szamlaloDiv.textContent = szamlalo
+
+            if(szamlalo < 0){
+                szamlaloDiv.style.color = "red"
+            }else{
+                szamlaloDiv.style.color = "green"
+            }
+            if (szamlalo<=-5) {
+                btnMinus.disabled=true
+            }else{
+                btnMinus.disabled=false
+            }
+            if (szamlalo>=5) {
+                btnPlus.disabled=true
+            }else{
+                btnPlus.disabled=false
+            }
+
+            
+        }
+
+        function inicializalas(){
+                console.log("asd");
+                
+                szamlalo = 0
+                szamlaloDiv.textContent = szamlalo
+                szamlaloDiv.style.color = "black"
+                btnPlus.disabled = false
+                btnMinus.disabled = false
+        }
+    </script>
+</body>
+</html>

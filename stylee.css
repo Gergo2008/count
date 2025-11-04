@@ -1,0 +1,38 @@
+.container{
+    min-height: 100vh;
+    background: #833AB4;
+    background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content{
+    width: 260px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 300px;
+}
+button{
+    background-color: rgb(200, 107, 236);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+button:hover{
+    background-color: rgb(106, 106, 194);
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+}
+h3{
+    text-align: center;
+}
